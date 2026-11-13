@@ -55,3 +55,7 @@ treeviz diff     org-a.graphml org-b.graphml --out compare.pdf --side-by-side
 ```
 
 Run `treeviz --help` for all options. The CLI binary is `src/TreeVisualizer.Cli/bin/<config>/net10.0/treeviz.exe`.
+
+## License
+
+[MIT](LICENSE)
