@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TreeVisualizer.App/TreeVisualizer.App.csproj" />
+    <Project Path="src/TreeVisualizer.Cli/TreeVisualizer.Cli.csproj" />
+    <Project Path="src/TreeVisualizer.Core/TreeVisualizer.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TreeVisualizer.Tests/TreeVisualizer.Tests.csproj" />
+  </Folder>
+</Solution>
