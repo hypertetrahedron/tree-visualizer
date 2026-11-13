@@ -1,6 +1,6 @@
 # Tree Visualizer installer for Windows.
 #
-#   powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/hypertetrahedron/tree-visualizer/main/install.ps1 | iex"
+#   powershell -NoProfile -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/hypertetrahedron/tree-visualizer/main/install.ps1 | iex"
 #
 # Installs the latest release for the current user (no admin rights needed):
 #   - files in %LOCALAPPDATA%\Programs\TreeVisualizer (TreeVisualizer.exe desktop app, treeviz.exe command line)

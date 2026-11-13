@@ -13,7 +13,7 @@ Plan: [PLAN.md](PLAN.md) · Status: [ROADMAP.md](ROADMAP.md)
 ## Install (Windows 10/11, x64 or ARM64)
 
 ```
-powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/hypertetrahedron/tree-visualizer/main/install.ps1 | iex"
+powershell -NoProfile -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/hypertetrahedron/tree-visualizer/main/install.ps1 | iex"
 ```
 
 This installs the latest release for the current user without admin rights. The files go in `%LOCALAPPDATA%\Programs\TreeVisualizer` and are checked against the release's SHA-256 checksums. The installer adds a Start menu shortcut and puts `treeviz` on your PATH (open a new terminal to use it). Run the same command again to upgrade. To uninstall, use Settings → Apps → Tree Visualizer.
