@@ -10,6 +10,16 @@ Radial tree visualizer for large hierarchies (built and tested at 10k nodes), wi
 
 Plan: [PLAN.md](PLAN.md) · Status: [ROADMAP.md](ROADMAP.md)
 
+## Install (Windows 10/11, x64 or ARM64)
+
+```
+powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/hypertetrahedron/tree-visualizer/main/install.ps1 | iex"
+```
+
+This installs the latest release for the current user without admin rights. The files go in `%LOCALAPPDATA%\Programs\TreeVisualizer` and are checked against the release's SHA-256 checksums. The installer adds a Start menu shortcut and puts `treeviz` on your PATH (open a new terminal to use it). Run the same command again to upgrade. To uninstall, use Settings → Apps → Tree Visualizer.
+
+[install.ps1](install.ps1) is short; read it before running it. Prefer manual? Download a zip from [Releases](https://github.com/hypertetrahedron/tree-visualizer/releases) and run `TreeVisualizer.exe` from anywhere.
+
 ## Build
 
 Requires the .NET 10 SDK on Windows.
@@ -19,12 +29,12 @@ git clone https://github.com/hypertetrahedron/tree-visualizer.git
 cd tree-visualizer
 dotnet build TreeVisualizer.slnx
 dotnet test tests/TreeVisualizer.Tests
-.\publish.ps1        # portable single-file builds: dist\app\TreeVisualizer.exe and dist\cli\treeviz.exe
+.\publish.ps1        # portable single-file builds in dist\win-x64 (add -Zip for the release zip)
 ```
 
 ## Unsigned executables
 
-The builds from `publish.ps1` are not code-signed (decided 2026-11-12; see [docs/SIGNING.md](docs/SIGNING.md)). On first run Windows SmartScreen shows "Windows protected your PC": choose **More info → Run anyway**. Machines with application-control policies (AppLocker or WDAC) may block unsigned executables entirely; ask IT to allow them.
+Releases and the builds from `publish.ps1` are not code-signed (decided 2026-11-12; see [docs/SIGNING.md](docs/SIGNING.md)). If you download a release zip with a browser, Windows SmartScreen shows "Windows protected your PC" on first run: choose **More info → Run anyway**. The install command above does not trigger this prompt. Machines with application-control policies (AppLocker or WDAC) may block unsigned executables entirely; ask IT to allow them.
 
 ## Desktop app
 

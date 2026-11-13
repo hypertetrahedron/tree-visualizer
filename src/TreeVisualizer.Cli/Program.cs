@@ -13,7 +13,7 @@ namespace TreeVisualizer.Cli;
 internal static class Program
 {
     private const string Usage = """
-        treeviz — radial tree renderer and differ for GraphML trees (see docs/FORMAT.md)
+        treeviz — Tree Visualizer command line: render and compare GraphML trees (see docs/FORMAT.md)
 
         Usage:
           treeviz stats    <tree.graphml>
